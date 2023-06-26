@@ -1,0 +1,7 @@
+<div class="grid">
+    <!-- <app-race-selector (raceSelected)="raceChanged($event)"></app-race-selector>    -->
+    <app-character-traits-selector (traitSelected)="traitAdded($event)"></app-character-traits-selector>
+    <app-image-display *ngIf="image" [url]="image"></app-image-display>
+    
+    <app-text-box *ngIf="textBoxTitle && textBoxContent" [title]="textBoxTitle" [content]="textBoxContent" ></app-text-box>
+</div>

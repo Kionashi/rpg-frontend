@@ -1,0 +1,8 @@
+.error {
+    color: red;
+    font-size: initial;
+}
+
+.btn-group{ // Extending the properties of the global btn-group that already has a display:grid
+    grid-template-columns: 1fr 1fr;
+}

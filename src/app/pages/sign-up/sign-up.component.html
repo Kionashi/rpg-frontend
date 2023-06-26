@@ -1,0 +1,42 @@
+<div class="container">
+    <h1 class="menu-title">Sign up!</h1>
+    <div class="menu">
+        <div class="menu-options">
+            <form [formGroup]="signUpForm" (submit)="signUp()">
+                <div class="menu-option">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" formControlName="username">
+                    <div class="error" *ngIf="signUpForm.controls.username.invalid && signUpForm.controls.username.touched">This field is required</div>
+                </div>
+                <div class="menu-option" >
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" formControlName="password">
+                    <div class="error" *ngIf="signUpForm.controls.password.invalid && signUpForm.controls.password.touched">This field is required</div>
+                </div>
+                <div class="menu-option" >
+                    <label for="passwordConf">Password confirmation:</label>
+                    <input type="password" id="passwordConf" formControlName="passwordConfirmation">
+                    <div class="error" *ngIf="signUpForm.controls.passwordConfirmation.invalid && signUpForm.controls.passwordConfirmation.touched">This field is required</div>
+                    <div class="error" *ngIf="signUpForm.errors?.['passwordsMismatch'] && signUpForm.controls.passwordConfirmation.touched">Password mismatch</div>
+                    
+                </div>
+                <div class="menu-option">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" formControlName="email">
+                    <span *ngIf="signUpForm.controls.email.invalid && signUpForm.controls.email.touched">
+                        <div class="error" *ngIf="signUpForm.controls.email.errors?.['required']">This field is required</div>
+                        <div class="error" *ngIf="signUpForm.controls.email.errors?.['email']">The email format is invalid</div>
+                    </span>
+                </div>
+                <div class="error" *ngIf="errors">
+                    <ul *ngFor="let errorTypes of errors| keyvalue">
+                        {{errorTypes.value}}
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button class="btn" type="submit" [disabled]="!signUpForm.valid">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

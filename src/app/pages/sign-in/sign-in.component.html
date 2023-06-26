@@ -1,0 +1,24 @@
+<div class="container">
+    <h1 class="menu-title">Sign in!</h1>
+    <div class="menu">
+        <div class="menu-options">
+            <form [formGroup]="signInForm" (submit)="signIn()">
+                <div class="menu-option">
+                  <label for="username">Username:</label>
+                  <input type="text" id="username" formControlName="username">
+                  <div class="error" *ngIf="signInForm.controls.username.invalid && signInForm.controls.username.touched">This field is required</div>
+                </div>
+                <div class="menu-option" >
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" formControlName="password">
+                  <div class="error" *ngIf="signInForm.controls.password.invalid && signInForm.controls.password.touched">This field is required</div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn" type="submit" [disabled]="!signInForm.valid">Submit</button>
+                    <button class="btn" routerLink="/sign-up">Sign up</button>
+                    <a class="btn" (click)="test()">Test</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

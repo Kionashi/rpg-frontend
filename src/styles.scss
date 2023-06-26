@@ -1,0 +1,100 @@
+body {
+    background-color: #222;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.home-bg {
+    background-image: url('./assets/backgrounds/main.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom ; /* Crop from the top */
+}
+
+.new-game-bg {
+    background-image: url('./assets/backgrounds/arena.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom ; /* Crop from the top */
+}
+
+.menu {
+    font-family: 'serif';
+    display: flex;
+    flex-direction: column;
+    border: 80px solid;
+    text-align: center;
+    border-image-slice:
+    162 fill;
+    border-image-repeat:
+    repeat-x;
+    border-image-source: url('./assets/gui/main-frame.png');
+}
+
+.menu-title {
+    margin-bottom: -1.25em;
+    z-index: 2;
+    color: #a76b36;
+    font-size: 36px;
+    border: 15px solid;
+    text-align: center;
+    border-image-slice:
+    25 fill ;
+    border-image-source: url('./assets/gui/title.png');
+}
+
+.btn {
+    color: white;
+    border: 11px solid;
+    text-align: center;
+    border-image-slice:
+    24 fill ;
+    font-size: x-large;
+    border-image-source: url('./assets/gui/btn.png');
+    cursor: pointer;
+}
+
+.btn:disabled {
+    color:#83807d;
+    cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+    color:#83807d;
+}
+
+.btn:hover {
+    color: #a76b36;
+}
+
+.btn-group{
+    display: grid;
+    gap: 1em;
+}
+
+.menu-options {
+   margin-top: 1em;
+}
+
+.menu-option {
+    margin-bottom: 10px;
+    display: block;
+    color: #ffeded;
+    padding: 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-option:hover {
+    color: #ffcc00;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+}

@@ -1,0 +1,15 @@
+/* .background {
+    background-color: #222;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-image: url('./../../../assets/backgrounds/arena.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom ; // Crop from the top
+}
+*/
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr  1fr;
+}

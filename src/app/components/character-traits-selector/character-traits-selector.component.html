@@ -1,0 +1,13 @@
+<div class="menu">
+    <div>
+        <h1 class="title">{{steps[currentStep].title}}</h1>
+    </div>
+    <app-select-name *ngIf="steps[currentStep].name == 'name' " (nameChanged)="updateName($event)" ></app-select-name>
+    <app-race-selector *ngIf="steps[currentStep].name == 'race' " (raceSelected)="selectRace($event)"></app-race-selector>
+    <app-job-selector *ngIf="steps[currentStep].name == 'job' && currentRace && currentRace.id " [raceId]="currentRace.id" ></app-job-selector>
+
+    <div class="navigation">
+        <button *ngIf="currentStep > 0" (click)="previousStep()" class="previous">Back</button>
+        <button *ngIf="currentStep <= steps.length" (click)="nextStep()" [disabled]="!isValid" class="previous">Next</button>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+.menu-option {
+    text-shadow: 4px 3px 0 #7A7A7A, -30px 0px 9px rgba(206,89,55,0);
+    text-decoration: none;
+}
+
+.menu {
+    padding: 1em;
+    min-width: 20em;
+}
+
+/* 
+.menu {
+    font-family: 'serif';
+    display: flex;
+    flex-direction: column;
+    min-width: 30em;
+    border: 80px solid;
+    text-align: center;
+    border-image-slice:
+    162 fill;
+    border-image-repeat:
+    repeat-x;
+    border-image-source: url('../../../assets/gui/main-frame.png');
+}
+
+.menu-title {
+    margin-bottom: -1.25em;
+    z-index: 2;
+    color: #a76b36;
+    font-size: 36px;
+    border: 15px solid;
+    text-align: center;
+    border-image-slice:
+    25 fill ;
+    border-image-source: url('../../../assets/gui/title.png');
+}
+
+.menu-options {
+   margin-top: 1em;
+}
+
+.menu-option {
+    margin-bottom: 10px;
+    display: block;
+    color: #ffeded;
+    text-shadow: 4px 3px 0 #7A7A7A, -30px 0px 9px rgba(206,89,55,0);
+    text-decoration: none;
+    padding: 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-option:hover {
+    color: #ffcc00;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+} */

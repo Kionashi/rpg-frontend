@@ -1,0 +1,21 @@
+.menu {
+    margin-top: 1.35em;
+    border-image-source: url('../../../assets/gui/main-frame-clear.png');
+}
+
+.title {
+    color: #a76b36;
+    font-size: 36px;
+    text-align: center;
+    margin: 0;
+    border-image-source: none !important;
+}
+
+.btn {
+    z-index: 2;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr  1fr;
+}
