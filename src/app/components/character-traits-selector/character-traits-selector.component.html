@@ -4,7 +4,11 @@
     </div>
     <app-select-name *ngIf="steps[currentStep].name == 'name' " (nameChanged)="updateName($event)" ></app-select-name>
     <app-race-selector *ngIf="steps[currentStep].name == 'race' " (raceSelected)="selectRace($event)"></app-race-selector>
-    <app-job-selector *ngIf="steps[currentStep].name == 'job' && currentRace && currentRace.id " [raceId]="currentRace.id" ></app-job-selector>
+    <app-job-selector 
+        *ngIf="steps[currentStep].name == 'job' && currentRace && currentRace.id " 
+        [raceId]="currentRace.id" 
+        (jobSelected)="selectJob($event)"
+        ></app-job-selector>
 
     <div class="navigation">
         <button *ngIf="currentStep > 0" (click)="previousStep()" class="previous">Back</button>

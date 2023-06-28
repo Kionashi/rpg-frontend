@@ -1,5 +1,5 @@
-import { SummaryElement } from "./summary-element";
-
-export interface Job extends SummaryElement {
+export interface Job {
     id: number,
+    title: string,
+    image?: string
 }

@@ -1,1 +1,3 @@
-<p>job-selector works!</p>
+<div class="grid">
+    <button *ngFor="let job of jobs" class="btn" (click)="selectJob(job)" >{{job.title}}</button>
+</div>

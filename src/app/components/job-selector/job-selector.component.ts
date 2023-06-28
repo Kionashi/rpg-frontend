@@ -23,8 +23,7 @@ export class JobSelectorComponent {
     ngOnInit() {
         const headers = new HttpHeaders().set('Authorization','Bearer '+this.authToken);
         let filters = {
-            filterEquals: 'juanito',
-            filtersLike: 'ARR'
+            race: this.raceId,
         }
         let params = new HttpParams({fromObject: filters});
         let options = {
@@ -49,8 +48,8 @@ export class JobSelectorComponent {
         })
     }
 
-    selectRace(job:Job) {
-        console.log('race selected', job);
+    selectJob(job:Job) {
+        console.log('jobs selected', job);
         this.jobSelected.emit(job)
     }
 }

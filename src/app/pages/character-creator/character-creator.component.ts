@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
 import { Character } from 'src/app/models/character';
+import { Job } from 'src/app/models/job';
 import { Race } from 'src/app/models/race';
 import { Trait } from 'src/app/models/trait';
 
@@ -33,12 +34,19 @@ export class CharacterCreatorComponent {
                 this.currentCharacter.name = trait.value;
                 break;
             case 'race':
-                const raceValue: Race = trait.value
-                this.image = raceValue.image? raceValue.image: '';
-                this.textBoxTitle = this.currentCharacter.name + ' the ' + raceValue.name;
-                this.textBoxContent = raceValue.description;
-                this.currentCharacter.race_id = raceValue.id;
+                const race: Race = trait.value
+                this.image = race.image? race.image: '';
+                this.textBoxTitle = this.currentCharacter.name + ' the ' + race.name;
+                this.textBoxContent = race.description;
+                this.currentCharacter.race_id = race.id;
                 break;
+            case 'job':
+                    const job: Job = trait.value
+                    this.image = job.image? job.image: '';
+                    this.textBoxTitle = this.currentCharacter.name + ' the ' + job.name;
+                    this.textBoxContent = job.description;
+                    this.currentCharacter.job_id = job.id;
+                    break;
             
             default:
                 break;

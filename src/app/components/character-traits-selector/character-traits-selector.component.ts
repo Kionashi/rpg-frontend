@@ -21,6 +21,7 @@ export class CharacterTraitsSelectorComponent {
     currentStep = 0;
     currentName: string = ''; // Current name of the character
     currentRace: Partial<Race> = {};
+    currentJob: Partial<Job> = {};
     raceSelected = false;
     jobSelected = false;
     steps: Array<{name:string, title:string}> = [
@@ -81,6 +82,13 @@ export class CharacterTraitsSelectorComponent {
         this.currentRace = race;
         const trait: Trait = { name: 'race', value: race};
         this.traitSelected.emit(trait)
+    }
+    selectJob(job:Job) {
+        this.jobSelected = true;
+        this.currentJob = job;
+        const trait: Trait = { name: 'job', value: job};
+        this.traitSelected.emit(trait)
+
     }
     updateName(name:string) {
         this.currentName = name;
